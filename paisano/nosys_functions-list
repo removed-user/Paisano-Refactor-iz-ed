@@ -1,19 +1,18 @@
+
+ recursed
+__functor = self: self.lib.noSys;
+allKnownSystems
+appendSystem
+deSys
 deSystemize
 desys
 desys.nix
-noSys
-appendSystem
-op
-pushDownSystem
+eachSys
 isDerivation
-allKnownSystems
 iteration
- recursed
-iteration
-systems'
-__functor = self: self.lib.noSys;
-
-deSys
 lib.deSys = import ./desys.nix;
 lib.eachSys = import ./eachSys.nix;
-eachSys
+noSys
+op
+pushDownSystem
+systems'

@@ -1,3 +1,0 @@
-flake.nix:  inputs.nosys.url = "github:divnix/nosys";
-flake.nix:    nosys,
-flake.nix:    deSystemize = nosys.lib.deSys;

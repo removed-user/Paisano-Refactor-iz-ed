@@ -1,7 +1,0 @@
-grow/newImportSignatureFor.nix:  deSystemize,
-flake.nix:    deSystemize = nosys.lib.deSys;
-flake.nix:    inherit (import ./grow {inherit l deSystemize paths types call-flake;}) grow growOn;
-grow/default.nix:  deSystemize,
-grow/default.nix:  ImportSignatureFor = import ./newImportSignatureFor.nix {inherit l deSystemize;};
-grow/default.nix:  output key. That's it. Never deal with it again. The 'deSystemize' function
-grow/default.nix:  - `inputs.cells` - all other cells, deSystemized

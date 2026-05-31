@@ -1,6 +1,0 @@
-list/deSystemize:grow/newImportSignatureFor.nix:  deSystemize,
-list/deSystemize:flake.nix:    deSystemize = nosys.lib.deSys;
-list/deSystemize:grow/default.nix:  deSystemize,
-flake.nix:    deSystemize = nosys.lib.deSys;
-grow/newImportSignatureFor.nix:  deSystemize,
-grow/default.nix:  deSystemize,

@@ -1,3 +1,0 @@
-grow/default.nix:    inherit (ProcessCfg cfg' inputs.self.sourceInfo) systems' cells' cellBlocks';
-grow/default.nix:    res = accumulate (l.map loadOutputFor systems');
-grow/newProcessCfg.nix:  systems' = Systems "${origin "systems"} - grow[On]:systems" systems;

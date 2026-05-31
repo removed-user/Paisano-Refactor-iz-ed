@@ -1,10 +1,3 @@
-grow/default.nix:    systems ? [
-grow/default.nix:    # preserve pos of `systems` if not using the default
-grow/default.nix:        if cfg ? systems
-grow/default.nix:        else {inherit systems;}
 grow/default.nix:    inherit (ProcessCfg cfg' inputs.self.sourceInfo) systems' cells' cellBlocks';
 grow/default.nix:    res = accumulate (l.map loadOutputFor systems');
-grow/newProcessCfg.nix:  inherit (cfg) cellBlocks systems cellsFrom;
 grow/newProcessCfg.nix:  systems' = Systems "${origin "systems"} - grow[On]:systems" systems;
-soil/winnow.nix:            (l.elem n l.systems.doubles.all) # avoids infinit recursion
-types/default.nix:  Systems = log: with yants log; list (enum "System" l.systems.doubles.all);

@@ -1,0 +1,21 @@
+list/deSystemize:nosys_functions-list:deSystemize
+list/deSystemize:grow/newImportSignatureFor.nix:  deSystemize,
+list/deSystemize:grow/newImportSignatureFor.nix:    (deSystemize system (cfg.inputs // additionalInputs))
+list/deSystemize:grow/newImportSignatureFor.nix:      cells = deSystemize system cells; # recursion on cells
+list/deSystemize:grow/newImportSignatureFor.nix:        # mimick deSystemize behaviour
+list/deSystemize:flake.nix:    deSystemize = nosys.lib.deSys;
+list/deSystemize:flake.nix:    inherit (import ./grow {inherit l deSystemize paths types call-flake;}) grow growOn;
+list/deSystemize:grow/default.nix:  deSystemize,
+list/deSystemize:grow/default.nix:  ImportSignatureFor = import ./newImportSignatureFor.nix {inherit l deSystemize;};
+list/deSystemize:grow/default.nix:  output key. That's it. Never deal with it again. The 'deSystemize' function
+list/deSystemize:grow/default.nix:  - `inputs.cells` - all other cells, deSystemized
+flake.nix:    deSystemize = nosys.lib.deSys;
+flake.nix:    inherit (import ./grow {inherit l deSystemize paths types call-flake;}) grow growOn;
+grow/newImportSignatureFor.nix:  deSystemize,
+grow/newImportSignatureFor.nix:    (deSystemize system (cfg.inputs // additionalInputs))
+grow/newImportSignatureFor.nix:      cells = deSystemize system cells; # recursion on cells
+grow/newImportSignatureFor.nix:        # mimick deSystemize behaviour
+grow/default.nix:  deSystemize,
+grow/default.nix:  ImportSignatureFor = import ./newImportSignatureFor.nix {inherit l deSystemize;};
+grow/default.nix:  output key. That's it. Never deal with it again. The 'deSystemize' function
+grow/default.nix:  - `inputs.cells` - all other cells, deSystemized

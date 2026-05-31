@@ -1,0 +1,29 @@
+list/noSys:nosys_functions-list:noSys
+list/desystemize:nosys_functions-list:desystemize
+list/iteration:nosys_functions-list:iteration
+local/flake.nix:  inputs.nosys.url = "github:divnix/nosys";
+local/flake.nix:    nosys,
+local/flake.nix:    nosys ((call-flake ../.).inputs // inputs) (
+list/isderivation:nosys_functions-list:isderivation
+list/deSystemize:nosys_functions-list:deSystemize
+list/deSystemize:flake.nix:    deSystemize = nosys.lib.deSys;
+local/flake.lock:    "nosys": {
+local/flake.lock:        "repo": "nosys",
+local/flake.lock:        "repo": "nosys",
+local/flake.lock:        "nosys": "nosys"
+list/appendsystem:nosys_functions-list:appendsystem
+list/isDerivation:nosys_functions-list:isDerivation
+list/eachSys:nosys_functions-list:eachSys
+list/appendSystem:nosys_functions-list:appendSystem
+list/eachsys:nosys_functions-list:eachsys
+list/desys:list/desystemize:nosys_functions-list:desystemize
+list/desys:nosys_functions-list:desystemize
+list/desys:nosys_functions-list:desys
+list/deSys:nosys_functions-list:deSystemize
+list/deSys:nosys_functions-list:deSys
+list/deSys:list/deSystemize:nosys_functions-list:deSystemize
+list/deSys:list/deSystemize:flake.nix:    deSystemize = nosys.lib.deSys;
+list/deSys:flake.nix:    deSystemize = nosys.lib.deSys;
+flake.nix:  inputs.nosys.url = "github:divnix/nosys";
+flake.nix:    nosys,
+flake.nix:    deSystemize = nosys.lib.deSys;
